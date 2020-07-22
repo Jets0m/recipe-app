@@ -1,0 +1,125 @@
+.post {
+    width: 100%;
+    background-color: #fff;
+    border-radius: 3px;
+    border: 1px solid lightgray;
+    margin-bottom: 15px;
+}
+
+.post__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px;
+
+    .post__headerText {
+        display: flex;
+        align-items: center;
+    }
+
+    .post__avatar {
+        margin-right: 10px;
+    }
+}
+
+.post__image {
+    width: 100%;
+    object-fit: cover;
+    max-height: 500px;
+    min-width: 400px;
+    min-height: 250px;
+
+}
+
+.post__text {
+    padding: 16px 16px 16px 16px;
+    display: flex;
+    flex-direction: column;
+
+    .post__title {
+        font-size: 1.5rem;
+        font-weight: 600;
+    }
+
+}
+
+.post__likes {
+    font-size: 0.8rem;
+    margin-top: 5px;
+    color: #a1a1a1;
+}
+
+.post__username {
+    font-weight: 600;
+    margin-right: 5px;
+}
+
+.post__commentsList {
+    padding: 0px 16px 16px 16px;
+    flex-grow: 1;
+    max-height: 250px;
+    overflow: auto;
+
+    p {
+        margin-top: 10px;
+    }
+
+    .comment__username {
+        font-weight: 600;
+        margin-right: 5px;
+    }
+}
+
+.post__commentsForm {
+    display: flex;
+    justify-content: center;
+    border-top: 1px solid lightgray;
+
+
+    .post__commentInput {
+        flex: 1;
+        border: none;
+        color: rgb(94, 94, 94);
+        padding: 15px;
+
+        &:focus {
+            outline: none
+        }
+    }
+
+    .post__commentButton {
+        flex: 0;
+        border: none;
+        background: none;
+        color: #0095f6;
+        font-weight: 600;
+        padding: 15px;
+        cursor: pointer;
+
+        &:disabled {
+            opacity: 0.3;
+            cursor: initial;
+        }
+
+        &:focus {
+            outline: none
+        }
+    }
+}
+
+.read-more-link {
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 0px 16px 8px;
+    display: block;
+}
+
+.hide {
+    display: none;
+}
+
+.extra-content {
+    color: cornflowerblue;
+    font-weight: 500;
+}

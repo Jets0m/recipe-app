@@ -1,0 +1,112 @@
+.post__open {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: auto 1fr 2fr;
+    height: 100%;
+    column-gap: 16px;
+
+    @media (max-width: 768px) {
+        grid-template-columns: 1fr;
+        grid-template-rows: 70px auto auto auto;
+    }
+}
+
+.recipe__header {
+    grid-column: 1/-1;
+    grid-row: 1/2;
+    border-bottom: 1px solid lightgray;
+    padding: 16px;
+
+    .recipe__headerText {
+        display: flex;
+        align-items: center;
+
+        .recipe__avatar {
+            margin-right: 10px;
+        }
+    }
+}
+
+.recipe__details {
+    grid-column: 1/2;
+    grid-row: 2/-1;
+    padding: 16px;
+    overflow: auto;
+
+    @media (max-width: 768px) {
+        grid-column: 1/2;
+        grid-row: 2/3;
+    }
+
+    .recipe__caption,
+    .recipe__ingredients {
+        margin-bottom: 16px;
+    }
+
+    .recipe__heading {
+        font-weight: 600;
+        margin-bottom: 5px;
+    }
+}
+
+.recipe__image {
+    grid-column: 2/-1;
+    grid-row: 2/3;
+    height: 300px;
+    overflow: hidden;
+    border-left: 1px solid lightgray;
+
+    @media (max-width: 768px) {
+        display: none;
+    }
+
+    img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.recipe__comments {
+    grid-column: 2/-1;
+    grid-row: 3/4;
+    display: flex;
+    flex-direction: column;
+    border-left: 1px solid lightgray;
+    overflow: hidden;
+
+    @media (max-width: 768px) {
+        grid-column: 1/2;
+        grid-row: 4/5;
+        border-left: none;
+        border-top: 1px solid lightgray;
+    }
+
+    .recipe__commentsTitle {
+        font-weight: 600;
+        padding: 16px 16px 16px 16px;
+    }
+
+    .recipe__commentsList {
+        padding: 0px 16px 0px 16px;
+        overflow: auto;
+    }
+}
+
+.recipe__ingredientsList {
+    margin: 0;
+
+    .recipe__ingredientItem {
+        margin: 10px 0;
+        margin-left: 15px;
+
+        .recipe__ingredientQuantity {
+            margin-right: 10px;
+            font-weight: 600;
+
+            &::after {
+                content: " -"
+            }
+        }
+    }
+}
